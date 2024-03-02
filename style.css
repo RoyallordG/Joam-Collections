@@ -209,6 +209,34 @@ font-weight: 600;
     height: 100%;
 }
 
+/* Category-page */
+
+.category-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, auto));
+    gap: 1rem; 
+}
+
+.category-container img{
+    object-fit: cover;
+    object-position: center;
+    padding: 0;
+    height: 300px;
+}
+.category-box a{
+    margin-top: 10px;
+    font-weight: 700px;
+    color: black;
+}
+.category-container a{
+    display: flex;
+    align-items: start;
+}   
+.category-box img:hover{
+    border-bottom: 3px solid brown;
+}
+
+
 /* Product Page */
 .product-container{
 display: grid;
@@ -219,7 +247,6 @@ row-gap: 2rem;
 .product-container .img-container{
 position: relative;
 cursor: pointer;
-/* height: 68%; */
 overflow: hidden;
 margin-top: 4rem;
 }
@@ -629,6 +656,125 @@ transition: 0.2s all linear;
 .track-form span{
     color: #ccc;
 }
+.search{
+    position: relative;
+    width: 700px;
+}
+
+/* Category display */
+.search input{
+    outline: none;
+    width: 600px;
+    
+}
+.search input::placeholder{
+    padding: 0 40px;
+} 
+.search .bx-search-alt-2{
+    position: absolute;
+    left: 15px;
+    z-index: 1;
+    bottom: 10px;
+    font-size: 20px;
+
+}
+.search .bx-x{
+    position: absolute;
+    right: 110px;
+    z-index: 1;
+    bottom: 10px;
+    font-size: 20px;
+    
+}
+.search a{
+    position: absolute;
+    right: 10px;
+    background: orange;
+    border-radius: 5px;
+    padding: 10px 15px;
+    color: white;
+
+}
+.shirt-container{
+    padding-top: 50px; 
+}
+.side-container{
+ padding-top: 20px; 
+ z-index: 1;
+}
+.side-container a{
+ color: black;
+ font-size: 16px;
+ line-height: 1.2;
+ font-weight: 500;
+}
+.side-container li{
+    margin-bottom: 20px;
+}
+.shirt-display{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+   gap: 1rem;
+}
+
+.shirt-sample img{
+    height: 250px;
+    object-fit: contain;
+    object-position: center;
+    
+}
+.shirt-sample{
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,0.2);
+    height: 360px;
+    padding: 0 5px 5px 5px;
+    cursor: pointer;
+    
+}
+.shirt-sample:hover a{
+    visibility: visible;
+}
+
+.shirt-sample a{
+  text-align: center;
+  justify-content: center;
+  color: white;
+  margin-top: 10px;
+  font-size: 16px;
+  display: flex;
+  background: var(--secondary-color);
+  padding: 10px 20px;
+  border-radius: 5px;
+  visibility: hidden;
+
+}
+ .shirt-container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+}
+
+.shirt-display{
+    position: absolute;
+    width: 85%;
+    min-height: 100px;
+    top: 0;
+    overflow: auto;
+    right: 0;
+    padding: 50px 15px;
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,0.2);
+    
+}
+.sample-details h5{
+    padding-top: 10px;
+    color: orange;
+    font-size: 16px;
+}
+.category-list .bx{
+    visibility: hidden;
+}
+
 
 /* Responsiveness */
 
@@ -837,5 +983,135 @@ font-size: 18px;
    }
 }
 
+/* Category Responsiveness */
+@media (max-width: 994px){
+.search input{
+   width: 70%; 
+   margin-left: 70px;
+}
+.search .bx-search-alt-2{
+    left: 90px;
+}
+.search .bx-x{
+    right: 145px;    
+}
 
+}
+@media (max-width: 946px){
+    .search{
+        visibility: hidden;
+    }
+    .search .bx-x{
+        right: 130px;    
+    }
+  .search{
+    width: 550px;
+  } 
+  
+   .navbar h2{
+   margin-bottom: 2rem;
+   }
+   .category-list li a{
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 600;
+  
+   }
+   header{
+    padding-left: 40px;
+    padding-right: 40px;
+   }
+ .containerr{
+    padding: 50px 40px;
+ }
+
+.shirt-container{
+   
+}
+ .side-container{
+   
+    left: 20px;
+    width: 30%;
+    height: 40%;
+ }
+ .shirt-display{
+    width: 70%;
+ }
+}
+@media (max-width: 768px){
+    .category-list{
+        position: absolute;
+        top: 0;
+        right: 70%;
+        left: -70%;
+        width: 30%;
+        height: 70vh;
+        background: white;
+        display: block;
+        padding-top: 70px;
+        transition: 0.3s;
+        margin-left: 0;
+       }
+      
+        .shirt-display{
+            grid-template-columns: 1fr 1fr;
+            width: 100%;
+         }
+       .category-list.active{
+        left: 0;
+       }
+       .category-list .bx{
+        visibility: visible;
+        display: flex;
+        align-items: end;
+        justify-content: end;
+        font-size: 20px;
+    }
+    .shirt-sample a{
+        visibility: visible;
+      }   
+      
+
+}
+
+@media (max-width: 828px){
+    .category-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(12rem, 2fr));
+        row-gap: 1.5rem;
+    
+    }
+    
+    .category-container img{ 
+        height: 250px;
+    }  
+}
+@media (max-width: 804px){
+   .footerc{
+    margin-top: 80px;
+   }
+}
+@media (max-width: 461px){
+    .category-container{
+        grid-template-columns: 1fr 1fr;
+    } 
+    .category-container img{ 
+        height: 250px;
+    } 
+   .containerr{
+    padding: 50px 20px;
+   }
+    header{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .shirt-sample a{
+        font-size: 13px;
+      }
+      .shirt-display{
+        margin-bottom: ;
+      }
+}
 
