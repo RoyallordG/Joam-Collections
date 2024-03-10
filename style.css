@@ -730,21 +730,24 @@ transition: 0.2s all linear;
     cursor: pointer;
     
 }
-.shirt-sample:hover a{
+.shirt-sample:hover button{
     visibility: visible;
 }
 
-.shirt-sample a{
+.shirt-sample button{
   text-align: center;
   justify-content: center;
+  outline: none;
+  border: none;
   color: white;
-  margin-top: 10px;
   font-size: 16px;
   display: flex;
   background: var(--secondary-color);
-  padding: 10px 20px;
+  padding: 10px 43px;
+  margin: 10px auto;
   border-radius: 5px;
   visibility: hidden;
+  text-transform: uppercase;
 
 }
  .shirt-container{
@@ -774,7 +777,10 @@ transition: 0.2s all linear;
 .category-list .bx{
     visibility: hidden;
 }
-
+.containerr{
+    margin-bottom: 250px;
+   
+}
 
 /* Responsiveness */
 
@@ -984,6 +990,27 @@ font-size: 18px;
 }
 
 /* Category Responsiveness */
+@media (max-width: 1417px){
+    .shirt-sample button{
+        padding: 10px 35px;
+      }
+}
+@media (max-width: 1338px){
+    .shirt-sample button{
+        padding: 10px 30px;
+      }
+}
+@media (max-width: 1288px){
+    .shirt-sample button{
+        padding: 10px 25px;
+      }
+}
+@media (max-width: 1215px){
+    .shirt-sample button{
+        padding: 10px 20px;
+        font-size: 14px;
+      }
+}
 @media (max-width: 994px){
 .search input{
    width: 70%; 
@@ -1042,15 +1069,18 @@ font-size: 18px;
 }
 @media (max-width: 768px){
     .category-list{
+        
         position: absolute;
-        top: 0;
-        right: 70%;
+        top: -5%;
+        right: 76%;
         left: -70%;
         width: 30%;
-        height: 70vh;
+        height: 30vh;
         background: white;
-        display: block;
-        padding-top: 70px;
+        z-index: 1001;
+        padding-top: 50px;
+        padding-right: 10px;
+        padding-left: 20px;
         transition: 0.3s;
         margin-left: 0;
        }
@@ -1060,7 +1090,7 @@ font-size: 18px;
             width: 100%;
          }
        .category-list.active{
-        left: 0;
+        left: -6%;
        }
        .category-list .bx{
         visibility: visible;
@@ -1069,11 +1099,19 @@ font-size: 18px;
         justify-content: end;
         font-size: 20px;
     }
-    .shirt-sample a{
+    .shirt-sample button{
         visibility: visible;
       }   
       
 
+}
+@media (max-width: 745px){
+    .action-buttons{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+      }
 }
 
 @media (max-width: 828px){
@@ -1091,6 +1129,7 @@ font-size: 18px;
 @media (max-width: 804px){
    .footerc{
     margin-top: 80px;
+    overflow: auto;
    }
 }
 @media (max-width: 461px){
@@ -1107,9 +1146,91 @@ font-size: 18px;
         padding-left: 20px;
         padding-right: 20px;
     }
-    .shirt-sample a{
+    .shirt-sample button{
         font-size: 13px;
+      }
+      .modal-content h2{
+        font-size: 20px;
+      }
+      
+}
+@media (max-width: 412px){
+    .sample-details span{
+        font-size: 14px;
+    }
+    .sample-details h5{
+        font-size: 14px;
+    }
+    .shirt-sample button{
+        font-size: 11px;
       }
       
 }
 
+/* The Modal */
+/* The Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+  }
+  
+ .options{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+ }
+  .modal-content .close{
+    display: flex;
+    justify-content: end;
+    cursor: pointer;
+  }
+  .second-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .quantity button{
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: orange;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+  }
+  .quantity input{
+    width: 30px;
+    height: 33px;
+  }
+  .action-buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .action-buttons button{
+    padding: 10px 20px;
+   background: var(--secondary-color); 
+   color: white;
+   outline: none;
+   border: none;
+   cursor: pointer;
+   border-radius: 5px;
+  }
