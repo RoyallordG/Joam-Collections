@@ -767,10 +767,11 @@ transition: 0.2s all linear;
     width: 85%;
     min-height: 100px;
     top: 0;
-    overflow: auto;
+    overflow: hidden;
     right: 0;
     padding: 50px 15px;
     box-shadow: 0 3px 5px 0 rgba(0,0,0,0.2);
+    
     
 }
 .sample-details h5{
@@ -1079,8 +1080,8 @@ font-size: 18px;
         top: -6%;
         right: 76%;
         left: -70%;
-        width: 40%;
-        height: 50vh;
+        width: 50%;
+        height: 70vh;
         background: white;
         z-index: 1001;
         padding-top: 50px;
