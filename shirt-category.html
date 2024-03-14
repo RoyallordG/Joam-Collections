@@ -15,7 +15,7 @@
 
     <header>
         <i class='bx bx-menu-alt-left menu-icon' id="menu-icon"></i>
-        <img src="logo.png" alt="">
+        <a href="index.html"><img src="logo.png" alt=""></a>
        <ul class="navbar">
        
          <div class="search">
@@ -40,6 +40,7 @@
       <div class="shirt-container">
         <div class="side-container">
           <div class="category-list">
+            <h3>Joams Collection</h3>
               <i class='bx bx-x' id="close-icon"></i>
           <li><a href="">Shirt</a></li>
           <li><a href="">Vintage</a></li>
@@ -52,7 +53,8 @@
             <img src="Men shirt 1.png" alt="">
             <div class="sample-details">
               <span>Cooperate Shirt</span>
-              <h5>#9,800</h5>
+            
+              <h5>#<span id="pricee">7000</span></h5>
             </div>
             
             <button class="add-to-cart-btn" onclick="openModal()">Add to Cart</button>
@@ -60,7 +62,7 @@
 
 
              <div id="myModal" class="modal">
-              <div class="modal-content">
+              <div class="modal-content" id="modal-content">
                 <span class="close" onclick="closeModal()">&times;</span>
                 <h2>Choose options:</h2>
                 <!-- Product options, quantity selector, action buttons -->
@@ -76,19 +78,22 @@
                 </div>
                 <div class="price">
                   <label for="price">Price:</label>
-                  <span id="price" value="10">$10</span>
+                  <span id="price">#7000</span>
                 </div>
               </div>
               <div class="second-row">
                 <div class="quantity">
                   <label for="quantity">Quantity:</label>
-                  <button onclick="decreaseQuantity()">-</button>
-                  <input type="number" id="quantity" min="0" value="0">
-                  <button onclick="increaseQuantity()">+</button>
+                  <div class="quantity-button">
+                  <button class="decrease" id="decrease">-</button>
+                  <p class="counter" id="counter">0</p>
+                  <button class="increase" id="increase">+</button>
+                </div>
                 </div>
                 <div class="total">
                   <label for="total">Total:</label>
-                  <span id="total">$10</span>
+                  <p>#<span id="total">0</span></p>
+
                 </div>
               </div>
                 <div class="action-buttons">
@@ -103,7 +108,7 @@
                <img src="Men shirt 2.png" alt="">
                <div class="sample-details">
                 <span>Cooperate Shirt</span>
-                <h5>#9,800</h5>
+                <h5>#<span id="pricee">7000</span></h5>
               </div>
               <button class="add-to-cart-btn" onclick="openModal()">Add to Cart</button>
                 </div>
@@ -120,7 +125,7 @@
                        <img src="Men shirt 4.png" alt="">
                        <div class="sample-details">
                         <span>Cooperate Shirt</span>
-                        <h5>#9,800</h5>
+                        <h5>#7000</h5>
                       </div>
                       <button class="add-to-cart-btn" onclick="openModal()">Add to Cart</button>
                         </div>
@@ -128,7 +133,7 @@
                    <img src="Men shirt 5.png" alt="">
                    <div class="sample-details">
                     <span>Cooperate Shirt</span>
-                    <h5>#9,800</h5>
+                    <h5>#7000</h5>
                   </div>
                   <button class="add-to-cart-btn" onclick="openModal()">Add to Cart</button>
                     </div>
@@ -190,6 +195,7 @@
       <div class="copyright">
       <p>&#169; Joams Collections All Right Reserved</p>
       </div>
+      <script src="update.js"></script>
     <script src="script2.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>

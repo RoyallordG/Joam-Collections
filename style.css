@@ -740,10 +740,11 @@ transition: 0.2s all linear;
   outline: none;
   border: none;
   color: white;
-  font-size: 16px;
+  width: 90%;
+  font-size: 13px;
   display: flex;
   background: var(--secondary-color);
-  padding: 10px 43px;
+  padding: 10px 20px;
   margin: 10px auto;
   border-radius: 5px;
   visibility: hidden;
@@ -994,7 +995,7 @@ font-size: 18px;
     .shirt-sample button{
         padding: 10px 35px;
       }
-}
+     
 @media (max-width: 1338px){
     .shirt-sample button{
         padding: 10px 30px;
@@ -1054,9 +1055,7 @@ font-size: 18px;
     padding: 50px 40px;
  }
 
-.shirt-container{
-   
-}
+
  .side-container{
    
     left: 20px;
@@ -1071,11 +1070,11 @@ font-size: 18px;
     .category-list{
         
         position: absolute;
-        top: -5%;
+        top: -6%;
         right: 76%;
         left: -70%;
-        width: 30%;
-        height: 30vh;
+        width: 40%;
+        height: 50vh;
         background: white;
         z-index: 1001;
         padding-top: 50px;
@@ -1091,6 +1090,9 @@ font-size: 18px;
          }
        .category-list.active{
         left: -6%;
+        position: fixed;
+        padding: 40px;
+        padding-top: 80px;
        }
        .category-list .bx{
         visibility: visible;
@@ -1101,6 +1103,7 @@ font-size: 18px;
     }
     .shirt-sample button{
         visibility: visible;
+        width: 90%;
       }   
       
 
@@ -1109,11 +1112,13 @@ font-size: 18px;
     .action-buttons{
         display: flex;
         flex-direction: column;
-        align-items: center;
-        gap: 4px;
+        gap: 6px;
       }
+      .action-buttons button{
+      width: 100%;
+      } 
+      
 }
-
 @media (max-width: 828px){
     .category-container{
         display: grid;
@@ -1131,7 +1136,19 @@ font-size: 18px;
     margin-top: 80px;
     overflow: auto;
    }
+  
 }
+}
+@media (max-width: 577px){
+    
+    #modal-content{
+     width: 80%;
+     margin-top: 40%;
+    }
+ }
+ 
+
+
 @media (max-width: 461px){
     .category-container{
         grid-template-columns: 1fr 1fr;
@@ -1152,6 +1169,7 @@ font-size: 18px;
       .modal-content h2{
         font-size: 20px;
       }
+     
       
 }
 @media (max-width: 412px){
@@ -1164,11 +1182,14 @@ font-size: 18px;
     .shirt-sample button{
         font-size: 11px;
       }
-      
+     .footer{
+        margin-top: 80px;
+     }
+     .category-list{
+        width: 60%;
+       }
 }
 
-/* The Modal */
-/* The Modal */
 .modal {
     display: none;
     position: fixed;
@@ -1176,6 +1197,7 @@ font-size: 18px;
     left: 0;
     top: 0;
     width: 100%;
+    height: 100vh;
     background-color: rgba(0,0,0,0.4);
   }
   
@@ -1186,6 +1208,9 @@ font-size: 18px;
     padding: 20px;
     border-radius: 10px;
     width: 50%;
+  }
+  .modal-content h2{
+    margin-bottom: 10px;
   }
   
  .options{
@@ -1198,6 +1223,7 @@ font-size: 18px;
     display: flex;
     justify-content: end;
     cursor: pointer;
+    font-weight: 700;
   }
   .second-row{
     display: flex;
@@ -1205,15 +1231,28 @@ font-size: 18px;
     justify-content: space-between;
     margin-bottom: 20px;
   }
+  
+.quantity-button{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.quantity p{
+    font-size: 18px;
+}
+.size select{
+    border: 1px solid var(--secondary-color);
+    outline: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
   .quantity button{
     padding: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    background: orange;
-    color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 1px solid var(--secondary-color);
     cursor: pointer;
     outline: none;
-    border: none;
     border-radius: 5px;
   }
   .quantity input{

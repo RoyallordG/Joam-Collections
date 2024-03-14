@@ -19,29 +19,15 @@ navElement.onclick = () => {
    overlay.classList.remove('active');
  }
 
-//  closeit.onclick = () => {
-//    overlay.classList.remove('active');
-//    categoryElement.classList.remove('active');
-//  }
-window.addEventListener('scroll', function(){
-  overlay.classList.remove('active');
-   categoryElement.classList.remove('active');
-   console.log("please work")
-})
-
  window.onscroll = () => {
-    categoryElement.classList.toggle('active');
-    overlay.classList.toggle('active');
-    console.log('hello')
+    categoryElement.classList.remove('active');
+    overlay.classList.remove('active');
  }
  window.addEventListener('scroll', () => {
     header.classList.toggle('shadow', window.scrollY > 0);
  })
 
 
-
-
-
  function openModal() {
    var modal = document.getElementById("myModal");
    modal.style.display = "block";
@@ -52,64 +38,7 @@ window.addEventListener('scroll', function(){
    modal.style.display = "none";
  }
  
- function increaseQuantity() {
-   var quantityInput = document.getElementById("quantity");
-   quantityInput.value = parseInt(quantityInput.value) + 1;
- }
  
- function decreaseQuantity() {
-   var quantityInput = document.getElementById("quantity");
-   var currentValue = parseInt(quantityInput.value);
-   if (currentValue > 0) {
-     quantityInput.value = currentValue - 1;
-   }
- }
- 
- window.onclick = function(event) {
-   var modal = document.getElementById("myModal");
-   if (event.target == modal) {
-     modal.style.display = "none";
-   }
- }
- 
- var pricePerUnit = 10; // Initial price per unit
- 
- function openModal() {
-   var modal = document.getElementById("myModal");
-   modal.style.display = "block";
-   updateTotal();
- }
- 
- function closeModal() {
-   var modal = document.getElementById("myModal");
-   modal.style.display = "none";
- }
- 
- function increaseQuantity() {
-   var quantityInput = document.getElementById("quantity");
-   quantityInput.value = parseInt(quantityInput.value) + 1;
-   updateTotal();
- }
- 
- function decreaseQuantity() {
-   var quantityInput = document.getElementById("quantity");
-   var currentValue = parseInt(quantityInput.value);
-   if (currentValue > 1) {
-     quantityInput.value = currentValue - 1;
-     updateTotal();
-   }
- }
- 
- function updateTotal() {
-   var quantityInput = document.getElementById("quantity");
-   var quantity = parseInt(quantityInput.value);
-   var total = quantity * pricePerUnit;
-   var totalSpan = document.getElementById("total");
-   totalSpan.textContent = "$" + total;
- }
- 
- // Update total whenever the quantity input changes
- document.getElementById("quantity").addEventListener("input", updateTotal);
  
  window.onclick = function(event) {
    var modal = document.getElementById("myModal");
@@ -119,3 +48,5 @@ window.addEventListener('scroll', function(){
  }
  
  
+ 
+
