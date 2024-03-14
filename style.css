@@ -543,6 +543,9 @@ textarea {
     gap: 1.5rem; 
 
 }
+.footer{
+    margin-top: 20px;
+}
 .footer-box form{
     position: relative;
 }
@@ -765,7 +768,7 @@ transition: 0.2s all linear;
 .shirt-display{
     position: absolute;
     width: 85%;
-    min-height: 100px;
+    min-height: 100vh;
     top: 0;
     overflow: hidden;
     right: 0;
