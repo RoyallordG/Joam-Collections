@@ -16,5 +16,6 @@ decrease.onclick = () =>{
 if(parseInt(counter.textContent) > 0){
     counter.textContent = parseInt(counter.textContent) - 1  
     total.textContent = parseInt(counter.textContent) * parseInt(pricee.textContent)
+    count.textContent = parseInt(count.textContent) - 1  
 }
 }
