@@ -543,9 +543,6 @@ textarea {
     gap: 1.5rem; 
 
 }
-.footer{
-    margin-top: 20px;
-}
 .footer-box form{
     position: relative;
 }
@@ -755,6 +752,7 @@ transition: 0.2s all linear;
   border-radius: 5px;
   visibility: hidden;
   text-transform: uppercase;
+  cursor: pointer;
 
 }
  .shirt-container{
@@ -768,13 +766,12 @@ transition: 0.2s all linear;
 .shirt-display{
     position: absolute;
     width: 85%;
-    min-height: 100vh;
+    min-height: 100px;
     top: 0;
-    overflow: hidden;
+    overflow: auto;
     right: 0;
     padding: 50px 15px;
     box-shadow: 0 3px 5px 0 rgba(0,0,0,0.2);
-    
     
 }
 .sample-details h5{
@@ -785,10 +782,7 @@ transition: 0.2s all linear;
 .category-list .bx{
     visibility: hidden;
 }
-.containerr{
-    margin-bottom: 250px;
-   
-}
+
 
 /* Responsiveness */
 
@@ -1115,7 +1109,10 @@ font-size: 18px;
         visibility: visible;
         width: 90%;
       }   
-      
+      .containerr{
+        margin-bottom: 550px;
+       
+    }      
 
 }
 @media (max-width: 745px){
@@ -1198,6 +1195,7 @@ font-size: 18px;
      .category-list{
         width: 60%;
        }
+     
 }
 
 .modal {
