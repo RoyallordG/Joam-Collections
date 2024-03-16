@@ -371,7 +371,9 @@ text-align: center;
     grid-template-columns: repeat(auto-fit, minmax(80px, auto));
     align-items: center;
     gap: 1.0rem; 
-     
+}
+.cart-btn button{
+    border: none;
 }
 @media screen and (max-width: 600px) {
 .cart-btn {
