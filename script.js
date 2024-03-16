@@ -25,7 +25,21 @@ let closeit = document.querySelector('#close-icon')
 let overlay = document.querySelector('.overlay');
 let navElement = document.querySelector('#nav-element');
 let categoryElement = document.querySelector('.category-list');
+let cartOverlay = document.querySelector('.cart-overlay');
+let cart = document.querySelector('.cart');
+let cartIcon = document.querySelector('.bx-cart-alt');
+let cartClose = document.querySelector('#cart-close');
 
+cartIcon.addEventListener('click', ()=>{
+  cartOverlay.style.visibility = 'visible'
+  cart.style.transform = 'translateX(0%)'
+  
+})
+cartClose.addEventListener('click', ()=>{
+  cartOverlay.style.visibility = 'hidden'
+  cart.style.transform = 'translateX(100%)'
+  
+})
 
 
 
