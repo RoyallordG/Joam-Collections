@@ -29,6 +29,58 @@ let cartOverlay = document.querySelector('.cart-overlay');
 let cart = document.querySelector('.cart');
 let cartIcon = document.querySelector('.bx-cart-alt');
 let cartClose = document.querySelector('#cart-close');
+let buy = document.querySelectorAll('#buy');
+let priced = document.querySelector('#priced');
+buy.forEach((item)=>{
+  item.addEventListener('click', (event)=>{
+  var modal = document.getElementById("myModal");
+  modal.style.display = "block";
+  let arrivalPrice = event.target.parentElement.querySelector('#arrival-price');
+  if(parseInt(arrivalPrice.textContent) === 7000){
+    counter.textContent = 0
+    total.textContent = 0
+    count.textContent = parseInt(count.textContent) + 1  
+    priced.textContent = parseInt(arrivalPrice.textContent) 
+  }
+  else if(parseInt(arrivalPrice.textContent) === 7500){
+    counter.textContent = 0
+    total.textContent = 0
+    count.textContent = parseInt(count.textContent) + 1 
+    priced.textContent = parseInt(arrivalPrice.textContent)
+  }
+  else if(parseInt(arrivalPrice.textContent) === 5000){
+    counter.textContent = 0
+    total.textContent = 0
+    count.textContent = parseInt(count.textContent) + 1 
+    priced.textContent = parseInt(arrivalPrice.textContent)
+  }
+  else if(parseInt(arrivalPrice.textContent) === 6000){
+    counter.textContent = 0
+    total.textContent = 0
+    count.textContent = parseInt(count.textContent) + 1 
+    priced.textContent = parseInt(arrivalPrice.textContent)
+  }
+  else if(parseInt(arrivalPrice.textContent) === 8500){
+    counter.textContent = 0
+    total.textContent = 0
+    count.textContent = parseInt(count.textContent) + 1 
+    priced.textContent = parseInt(arrivalPrice.textContent)
+
+  }
+  else{
+    counter.textContent = 0
+    priced.appendChild(document.createTextNode('Updating price'))
+  }
+})
+})
+
+
+
+function closeModal() {
+  var modal = document.getElementById("myModal");
+  modal.style.display = "none";
+}
+
 
 cartIcon.addEventListener('click', ()=>{
   cartOverlay.style.visibility = 'visible'
@@ -69,6 +121,21 @@ window.onscroll = () => {
 window.addEventListener('scroll', () => {
    header.classList.toggle('shadow', window.scrollY > 0);
 })
+
+
+increase.onclick = () =>{
+  counter.textContent = parseInt(counter.textContent) + 1
+  total.textContent = parseInt(counter.textContent) * parseInt(priced.textContent)
+  count.textContent = parseInt(count.textContent) + 1
+}
+
+decrease.onclick = () =>{
+if(parseInt(counter.textContent) > 0){
+    counter.textContent = parseInt(counter.textContent) - 1  
+    total.textContent = parseInt(counter.textContent) * parseInt(priced.textContent)
+    count.textContent = parseInt(count.textContent) - 1  
+}
+}
 
 
 
